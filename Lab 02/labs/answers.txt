@@ -1,0 +1,53 @@
+
+Question 1)
+
+   (i)docker build -t amila/app1 .
+    (ii)docker run -p3000:3000 amila/app1
+
+Question 2)
+
+    (i)docker build -t amila/app2 .
+     (ii)docker run -p 3000:3000 amila/app2
+
+Question 3)
+
+   docker run -e colour=blue -e message=hi -p 3000:3000 amila/app2
+
+  Explaination: We assign values to colour and message at the terminak when run command used.
+
+Question 4)
+      (i)docker build -t amila/app3 .
+      (ii)docker run -e colour=blue -e message=hi -p 3000:3000 amila/app3
+
+
+Question 5)
+     (i)docker build -t amila/app4 .
+    (ii)docker run -p 3000:3000 amila/app4
+
+
+Question 6)
+
+We cannot access the previous image. Because the Containers are in the container layer in the Docker "layered architecture". Each container has its own layer called "container layer". When we remove the container the data in that particular layer also gets deleted.Therefore we cannot access that data with a new container.
+    
+
+Question 7)
+
+   (i)docker volume create data_volume
+   (ii)docker run -v data_volume:/upload -p 3000:3000 amila/app4
+
+    (iii) Then upolad a picture
+    (iv)remove the container
+    (v)docker run -v data_volume:/upload -p 3000:3000 amila/app4
+
+
+Question 8)
+ 
+link  : https://hub.docker.com/r/e15385/app4
+
+pull commnd: docker pull e15385/app4
+
+
+
+ 
+
+
